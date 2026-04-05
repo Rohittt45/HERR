@@ -53,11 +53,20 @@ body {
 .flag__birthday .flag__right{
     transform: rotate(10deg) translate(20px,30px) scaleX(-1);
 }
-.content{
-    width: 100%;
-    position: relative;
-    display: flex;
-    padding-top: 3rem;
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding:40px 40px 20px;
+  box-sizing: border-box;
+}
+.left,
+.right {
+  flex: 1;
+  max-width: 500px;
 }
 .content .left, .content .right{
     position: relative;
@@ -337,7 +346,7 @@ body {
     right: 20px;
     font-size: 28px;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 @media(max-width:768px) {
@@ -868,96 +877,6 @@ body {
 }
 
 
-/* Mobile Responsive Fix */
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    #wrapper {
-        width: 100%;
-        overflow-x: hidden;
-        padding: 20px 10px;
-        box-sizing: border-box;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .title h1 {
-        font-size: 42px;
-        line-height: 1.1;
-    }
-
-    .hat img {
-        width: 90px;
-    }
-
-    .flag__birthday {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .flag__left,
-    .flag__right {
-        width: 130px;
-    }
-
-    .box__account {
-        width: 90%;
-        max-width: 300px;
-        padding: 15px;
-    }
-
-    .box__account .image img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-
-    .name {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    .balloon_one,
-    .balloon_two {
-        display: none;
-    }
-
-    .cricle {
-        transform: scale(0.8);
-        margin-top: 15px;
-    }
-
-    .btn {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-}
-
 
 
 
@@ -1243,3 +1162,422 @@ body {
     line-height: 1.7;
 }
 
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.closeSection {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9999;
+    line-height: 1;
+}
+
+.cuteSection {
+    position: fixed;
+    z-index: 9998;
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    height: auto;
+  }
+
+  #wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px 10px 40px;
+  }
+
+  .content {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  .left,
+  .right {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .title .happy,
+  .title .birthday {
+    flex-wrap: wrap;
+  }
+
+  .title .hat {
+    right: -30px;
+    top: -50px !important;
+  }
+
+  .title .hat img {
+    width: 70px;
+  }
+
+  .flag__birthday {
+    transform: translateY(0);
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .flag__birthday .flag__left,
+  .flag__birthday .flag__right {
+    width: 110px;
+  }
+
+  .content .right .image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .date__of__birth {
+    width: 260px !important;
+    height: 45px !important;
+  }
+
+  .date__of__birth span {
+    font-size: 1rem;
+    margin: 0 20px;
+  }
+
+  .name {
+    bottom: -12px;
+    padding: 3px 12px;
+  }
+
+  .name span {
+    font-size: 1.1rem;
+  }
+
+  .right .balloon_one {
+    top: 0;
+    left: -35px;
+  }
+
+  .right .balloon_one img {
+    width: 60px;
+  }
+
+  .right .balloon_two {
+    top: 110px;
+    right: -20px;
+  }
+
+  .right .balloon_two img {
+    width: 60px;
+  }
+
+  .cricle {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 10px;
+    transform: scale(0.75);
+  }
+
+  .btn,
+  .extra-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #btn__letter,
+  .cuteBtn {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .decorate_star.star3,
+  .decorate_star.star5,
+  .decorate_flower--two,
+  .smiley__icon {
+    display: none;
+  }
+
+  .boxMail .boxMail-container {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .boxMail .boxMail-container .card1,
+  .boxMail .boxMail-container .card2 {
+    width: 100%;
+    position: relative;
+  }
+
+  .cuteSection {
+    width: 92%;
+    max-width: 340px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}@media screen and (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  #wrapper {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px 10px 50px;
+  }
+
+  .flag__birthday {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transform: translateY(0);
+  }
+
+  .flag__birthday .flag__left,
+  .flag__birthday .flag__right {
+    width: 100px !important;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 0 40px;
+    min-height: auto;
+  }
+
+  .content .left,
+  .content .right {
+    width: 100%;
+    max-width: 100%;
+    flex: unset;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .title .happy,
+  .title .birthday {
+    flex-wrap: nowrap;
+  }
+
+  .title .hat {
+    top: -50px !important;
+    right: -20px;
+  }
+
+  .title .hat img {
+    width: 70px;
+  }
+
+  .date__of__birth {
+    width: 260px !important;
+    height: 45px !important;
+  }
+
+  .date__of__birth span {
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+
+  .content .right .image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .right .box__account {
+    transform: translateY(0);
+    margin-top: 10px;
+  }
+
+  .name {
+    bottom: -10px;
+    padding: 2px 12px;
+  }
+
+  .name span {
+    font-size: 1rem;
+  }
+
+  .right .balloon_one {
+    top: -10px;
+    left: -35px;
+  }
+
+  .right .balloon_one img {
+    width: 60px !important;
+  }
+
+  .right .balloon_two {
+    top: 110px;
+    right: -20px;
+  }
+
+  .right .balloon_two img {
+    width: 60px !important;
+  }
+
+  .cricle {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 15px;
+    transform: scale(0.8);
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extra-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #btn__letter,
+  .cuteBtn {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .decorate_star.star3,
+  .decorate_star.star5,
+  .decorate_flower--two,
+  .smiley__icon {
+    display: none;
+  }
+  /* Add this inside your mobile media query */
+
+.btn,
+.extra-buttons {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.cricle {
+  margin-bottom: 0 !important;
+}
+
+.right {
+  gap: 10px !important;
+}
+
+.right .box__account {
+  margin-bottom: 10px !important;
+}
+
+#btn__letter,
+.cuteBtn {
+  margin-top: 0 !important;
+}
+/* Put this inside the mobile media query */
+
+.right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.cricle {
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: scale(0.7) !important;
+}
+
+.box__account {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.btn,
+.extra-buttons {
+  margin: -20px 0 0 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  top: -20px !important;
+}
+
+#btn__letter,
+.cuteBtn {
+  margin: 5px 0 !important;
+}
+.left {
+  order: 1;
+}
+
+.right {
+  order: 2;
+  margin-top: -20px !important;
+}
+
+.left .btn {
+  margin-top: -30px !important;
+  transform: scale(1) !important;
+}
+
+.extra-buttons {
+  margin-top: 10px !important;
+}
+
+.cricle {
+  display: none !important;
+}
+
+.right .box__account {
+  transform: translateY(0) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+}
